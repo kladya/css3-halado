@@ -1,6 +1,7 @@
 .flex-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;    /* nowrap: az elemeket nem dobja új sorba, ha nem férnek már el, hanem elkezdi keskenyíteni
+                         wrap: ha nem férnek el az elemek, akkor is megőrzik a megadott 100px szélességet és új sorba dobja őket a böngésző */
   background-color: dodgerblue;
 }
 
@@ -12,3 +13,16 @@
   line-height: 75px;
   font-size: 30px;
 }
+
+
+
+/*
+Elrendezések (layout-ok): (display)
+
+1. block: minden egymás alá kerül
+2. inline: egymás mellé kerülnek az elemek
+3. table: 2D-s táblázatban helyezi el az elemeket
+4. pozicionált: (pl. absolute), mi adjuk meg a konkrét pozícióját egy elemnek
+5. flexbox: ahogy csökken a képernyő szélessége, egyre kisebbé válnak az elemek
+    flexibilis, rugalmas elrendezést tesz lehetővé
+*/

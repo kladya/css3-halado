@@ -1,3 +1,11 @@
+/* BEM: így épülnek fel a css szelektorok: 
+.product__photo--center {
+  =olyan termékfotó, ami középre van igazítva
+  __ = elem a blockon belül (element)
+  -- = modifier
+*/
+
+
 .container {
   height: 100vh;
 }
@@ -87,7 +95,7 @@
   transform: scale(1);
 }
 .btn--primary:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);   /* kicsit megnő a gomb mérete, ha fölé megy a kurzor */
 }
 .btn--secondary {
   background-color: #2d91a1;
@@ -101,7 +109,7 @@
   display: flex;
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style-type: none;    /* listaelemeket egymás mellé teszi, nem egymás alá */
 }
 .socials__item:not(:last-child) {
   margin-right: 5px;

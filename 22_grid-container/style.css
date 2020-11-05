@@ -1,7 +1,12 @@
+/* ha gyorsan akarok weboldalt építeni
+   rács-rendszerben helyezi el az oldal részeit (sorok, oszlopok)
+   */
+
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto;   /* ez adja meg, hogy hány oszlopom van
+                                                   itt 4 egyforma széles(auto) oszlopom van */
+  grid-gap: 10px;   /* az elemek közt mekkora a rés */
   background-color: #2196F3;
   padding: 10px;
 }

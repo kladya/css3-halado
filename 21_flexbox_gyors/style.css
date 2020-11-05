@@ -45,7 +45,7 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 30%;
+  flex: 30%;    /* 700px felett 30-70%-os arányt megtartja a side és a main */
   background-color: #f1f1f1;
   padding: 20px;
 }
@@ -74,6 +74,6 @@ body {
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
   .row, .navbar {   
-    flex-direction: column;
+    flex-direction: column;   /* elemek egymás alá kerüljenek oszlopba */
   }
 }

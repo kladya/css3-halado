@@ -58,14 +58,26 @@ html {
   padding: 15px;
 }
 
+
+
+
+/* Reszponzív design-nál 12 egyenlő részre osztják fel az oldalt:
+    col-12 a 100%, teljes szélességű oldalt jelenti */
+
+
+
 /* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
+[class*="col-"] {   /* mobilon minden col- elem 100% széles legyen */
+  width: 100%;      /* 600px alatt az összes elem szélessége legyen 100% */
 }
 
+
+
+      /* =csak screen esetén érvényes ez a beállítás, nyomtatásnál(only print) nem,
+            és ha a kijelző mérete 600px széles vagy nagyobb */
 @media only screen and (min-width: 600px) {
   /* For tablets: */
-  .col-s-1 {width: 8.33%;}
+  .col-s-1 {width: 8.33%;}    
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}
   .col-s-4 {width: 33.33%;}
@@ -78,7 +90,10 @@ html {
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
 }
-@media only screen and (min-width: 768px) {
+
+
+
+@media only screen and (min-width: 768px) {   /* ez felülírja az előző 600px-es beállítást */
   /* For desktop: */
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
@@ -93,3 +108,6 @@ html {
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 }
+
+
+/* --> div class-okat is ez alapján kell elnevezni! */
