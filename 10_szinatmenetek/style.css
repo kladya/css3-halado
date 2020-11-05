@@ -1,9 +1,15 @@
 .icon-blue {
+                    /* folyamatos színátmenet(milyen irányban, melyik színből melyik színbe) */
   background-image: linear-gradient(45deg, #135fe4 0%, #69d3f7 100%);
   color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  
+  background-clip: text;  /* hogy legyen csatolva a háttér az elemhez, 
+                              a szövegen lesz csak a háttér */
+  -webkit-background-clip: text;  /* prefixálni is kell ahhoz hogy működjön,
+                                      böngésző-prefixszel kell ellátni, bizonyos böngészők csak akkor támogatják, ha a prefixük ott van előtte
+                                      a chrome pl. webkit alapú */                          
 }
+
 .icon-green {
   background-image: linear-gradient(315deg, #9be15d 0%, #00e3ae 100%);
   color: transparent;
@@ -11,6 +17,7 @@
   background-clip: text;
 }
 .icon-orange {
+                    /* bentről kifelé, körkörös színátmenet, bármennyi színt megadhatok */
   background-image: radial-gradient(red 10%, yellow 80%, white);
   color: transparent;
   -webkit-background-clip: text;

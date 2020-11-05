@@ -30,7 +30,7 @@ body {
   background: transparent;
   border: 0;
   border-radius: 0;
-  color: inherit;
+  color: inherit;     /* megörökli a szülő elem színét */
   display: inline-block;
   font: inherit;
   height: auto;
@@ -48,8 +48,8 @@ body {
  * Never do this unless you will replace them!!
  */
 
-.button:focus {
-  outline: none;
+.button:focus {   /* ha fókuszba kerül a gomb */
+  outline: none;  /* ne legyen semmilyen kiemelés */
 }
 
 .button::-moz-focus-inner {
@@ -57,22 +57,22 @@ body {
 }
 
 .button-inner {
-  align-items: center;
+  align-items: center;  /* elemek középre igazítása */
   background: #456BD9;
-  border: 2px solid transparent;
-  border-radius: 99em;
+  border: 2px solid transparent;  /* solid=folytonos vonal */
+  border-radius: 99em;  /* bármekkora betűméret esetén is félkör marad */
   color: #fff;
   display: flex;
-  font-weight: 600;
+  font-weight: 600;   /* betűvastagság, 100-900 közt állítható */
   height: 2.5em;
   min-width: 2.5em;
   padding: 0 1em;
   position: relative;
   transition: 0.2s ease;
-  width: 100%;
+  width: 100%;  /* a gomb szélességét felveszi az inner */
 }
 
-.button:focus .button-inner {
+.button:focus .button-inner {   /* ha fókuszt kap, megváltozik a színe */
   border-color: #fff;
   box-shadow: 0 0 0 2px #456BD9;
 }

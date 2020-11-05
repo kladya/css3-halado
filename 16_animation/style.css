@@ -12,14 +12,14 @@
   height: 47px;
   background: #92B901;
   color: #fff;
-  position: relative;
+  position: relative;   /* animációknál relative-nek v. absolute-nak kell lennie */
   padding: 10px;
   border-radius: 5px;
   animation: animated_div 5s infinite;
 }
 
 @keyframes animated_div {
-  0% {
+  0% {    /* idő 0, 50, 100%-ánál hogyan viselkedjen az elem */
     left: 0px;
   }
   50% {

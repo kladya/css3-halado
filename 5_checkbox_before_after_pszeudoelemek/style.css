@@ -1,0 +1,84 @@
+html,
+body {
+  display: -webkit-box;
+  display: flex;
+  min-height: 100%;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  font-family: sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tg-list {
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.tg-list-item {
+  margin: 0 2em;
+}
+
+h2 {
+  color: #777;
+}
+
+h4 {
+  color: #999;
+}
+
+.tgl {
+  display: none;
+}
+.tgl, .tgl:after, .tgl *, .tgl *:after, .tgl + .tgl-btn {
+  box-sizing: border-box;   /* paddingok és borderek ne kavarjanak be a méretbe
+                                mindegyik ugyanakkora méretű marad */
+}
+.tgl + .tgl-btn {   /* ez a label elem */
+  outline: 0;     /* ne legyen kiemelés */
+  display: block;
+  width: 4em;   /* szülő elem fontsize méretéhez igazodik */
+  height: 2em;
+  position: relative;
+  cursor: pointer;    /* kéz jelenik meg, ha fölé visszük az egeret */
+  user-select: none;  /* kijelölésnél ha húzom az egeret, nem lesz kék a háttere */
+}
+.tgl + .tgl-btn:after {   /* ez a label elem after eleme */
+  position: relative;     /* hogy tudjam változtatni a kapcsoló állását jobb ill. bal oldalra */
+  display: block;
+  content: "";  /* tartalma üres szín */
+  width: 50%;   /* fele olyan széles, mint a befogadó label */
+  height: 100%;
+}
+.tgl + .tgl-btn:after {           /* bal oldalon van a gomb */
+  left: 0;
+}
+.tgl:checked + .tgl-btn:after {   /* ha a checkbox be van pipálva */
+  left: 50%;                      /* akkor jobb oldalon van a gombóc */
+}
+
+.tgl + .tgl-btn {
+  background-color: #f0f0f0;
+  border-radius: 2em;
+  padding: 2px;
+}
+.tgl + .tgl-btn:after {
+  border-radius: 50%;
+  background-color: #fff;
+}
+.tgl:checked + .tgl-btn {
+  background-color: #9FD6AE;
+}

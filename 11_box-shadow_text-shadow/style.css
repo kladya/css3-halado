@@ -1,0 +1,20 @@
+div.polaroid {
+  width: 250px;
+              /*  vízszintes eltolás az elemhez képest, kilógjon-e vízszintesen az árnyék
+                  függőleges eltolás
+                  blur: mennyire legyen elmosódott az árnyék széle 
+                  spread: mennyire terjedjen, legyen nagyobb a normál méretéhez képest
+                  color */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                                                /* egy elemre több árnyék is megadható */
+  text-align: center;
+}
+
+div.container {
+  padding: 10px;
+  font-size: 2em;
+}
+
+div.container p {
+  text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+}

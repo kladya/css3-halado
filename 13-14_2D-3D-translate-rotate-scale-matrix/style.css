@@ -1,0 +1,56 @@
+div:not(.container) {   /* ha vmi nem a container div, akkor az úgy nézzen ki, hogy: */
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 0, 0, 0.7);
+  border: 1px solid black;
+  box-shadow: 0 0 3px;    /* x,y eltolás és árnyék méret */
+}
+
+.translate {    /* eltolás x,y irányban */
+  -ms-transform: translate(50px,10px); /* IE 9 prefix */
+  transform: translate(50px,10px); /* Standard syntax */
+  margin-bottom: 30px;    /* ne csússzon rá a következő elemre */
+}
+
+.rotate {   /* forgatás hány fokkal (óramutató járása szerint) */
+  margin: 50px 0;
+  -ms-transform: rotate(20deg); /* IE 9 */
+  transform: rotate(20deg); /* Standard syntax */
+}
+
+.scale {    /* skálázás, méretezés az elem valahányszorosára x,y irányban
+                kicsinyíteni, nagyítani is lehet */
+  margin: 50px 0;
+  -ms-transform: scale(2, 1.5); /* IE 9 */
+  transform: scale(2, 1.5); /* Standard syntax */
+}
+
+.matrix {   
+  margin-top: 40px;
+  -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */
+  transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
+                  /* scale x, skew y, skew x, scale y, translate x, translate y */
+                  /* skew: nyújtás */                 
+}
+
+/*
+Plusz anyag: 3D transzformációk:
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3D
+
+3. tengely: z (mélység, mínusz érték esetén távolabb kerül az elem, azaz kisebb lesz)
+
+transform: translate3D(x, y, z);
+
+y: mínusz px: felfelé mozdul
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3D
+
+transform: rotate3d(1, 1, 1, 45deg);
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3D
+
+transform: scale3d(0.5, 1, 1.7);
+*/

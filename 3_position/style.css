@@ -1,0 +1,38 @@
+.static {
+    position: static;      /* ezt nem kell beírni, alapértelmezetten minden elem statikus */
+    border: 3px solid #73AD21;
+}
+
+.relative {
+    position: relative;
+    left: 30px;            /* relatív elemet 30px-lel balra eltoljuk az előtte található elemhez képest 
+                                ha nem adunk meg semmit, akkor csak simán az előző elem után fog elhelyezkedni a relatív elem */
+    border: 3px solid #73AD21;
+}
+
+.fixed {
+    position: fixed;    /* böngészőablakhoz(viewport) képest fix helyen marad */
+    bottom: 0;          /* 0-nak nem kell mértékegységet adni 
+                            4 irányt lehet megadni: top, right, bottom, left */
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+
+.absolute {
+    position: absolute;  /* ahhoz az első elemhez igazítja magát, ami nem statikus, hanem vagy relatív, vagy abszolút vagy fixed */
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+
+div.sticky {
+    position: sticky;  /* addig mozog együtt a többi elemmel, amíg el nem éri az oldal tetejét,
+                            után ott ragad felül */
+    top: 0;
+    padding: 5px;
+    background-color: #cae8ca;
+    border: 3px solid #73AD21;    
+}

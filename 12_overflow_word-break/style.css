@@ -1,0 +1,58 @@
+.overflow1 {
+  white-space: nowrap;  /* üres karaktereknél(=szóköz, white space) ne tördelje (ne vágja el) a szöveget */
+  width: 200px;
+  border: 1px solid black;
+  overflow: hidden;   /* el lesz rejtve az overflow(az szöveg azon része, ami kilóg) */
+  text-overflow: clip;  /* levágja */
+}
+
+.overflow2 {
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid black;
+  overflow: hidden;
+  text-overflow: ellipsis;    /* ...-tal zárja le a szöveget */
+}
+
+p.wrap {    /* wrap: hogyan tördelje a szöveget */
+  width: 11em;
+  border: 1px solid black;
+  word-break: keep-all;   /* eltörje-e a szövegben a szavakat
+                            keep-all: még akkor sem töri el, ha nem fér ki a szó */
+}
+
+/* kötőjelnél széttöri a szót: */
+p.word-break-1 {
+  width: 140px;
+  border: 1px solid black;
+  word-break: keep-all;
+}
+
+/* break-all: bárhol eltöri a szót */
+p.word-break-2 {
+  width: 140px;
+  border: 1px solid black;
+  word-break: break-all;
+}
+
+/* hogyan legyen a szöveg írva: vízszintesen v. függőlegesen */
+p.writing-mode-1 {
+  writing-mode: horizontal-tb;
+}
+
+span.writing-mode-2 {
+  writing-mode: vertical-rl;  /* jobbról balra */
+}
+
+p.writing-mode-2 {
+  writing-mode: vertical-lr;  /* balról jobbra, de ez nem működik */
+}
+
+/*
+plusz infó:
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation
+
+*/

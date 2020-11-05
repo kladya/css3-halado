@@ -1,0 +1,26 @@
+/*   *=minden elemre legyen igaz a fájlban    */
+* { 
+    box-sizing: border-box;   /* a border szélessége és a padding nem növeli az elem méretét  */
+}
+
+.img-container {   /* a képet befogadó div osztály-szelektora */
+    float: left;   /* balra igazít, balra folynak az elemek  */
+    width: 33.3%;  /*  3db kép férjen el egymás mellett, ami kitölti az oldalt */
+    padding: 5px;  /*  minden irányból 5px  */  /*<-- befelé fogja elvenni a paddingot az elem méretéből a border-box beállítás miatt */
+                    /*  különben nem férnének el egymás mellett a divek a 33%-kal, és aládobja a böngésző */
+}                   /*  bodyra is 5px padding  --> 10px lesz mindenütt körben */
+
+/* float: right esetén jobbra igazít, ugyanúgy néz ki, csak megfordul a képek sorrendje */
+
+.container-clearfix {
+    background-color: aqua;
+    display: inline-block;  /*  a div alapértelmezetten block elem, azaz teljes szélességű */
+}                           /*  display: inline --> eltűnik a container  *
+                            /*  inline-block --> kisebb lesz az elem  --> elfér még mellette tartalom  */
+
+.clearfix::after {   /*  sortörés az elem után  */
+                    /*  ::after pszeudoelem: az elem utáni közvetlen elhagyás, nem tud mellékerülni tartalom, csak alá  */
+    content: "";    /*  a tartalom legyen üres string  */
+    clear: both;    /*  fent és lent is üres  legyen, ne tudjon mellémenni más elem  */
+    display: table; /*  régebbi bönngészők miatt állítjuk be  */
+}
