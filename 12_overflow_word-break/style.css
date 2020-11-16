@@ -45,7 +45,7 @@ span.writing-mode-2 {
 }
 
 p.writing-mode-2 {
-  writing-mode: vertical-lr;  /* balról jobbra, de ez nem működik */
+  writing-mode: vertical-lr;  /* balról jobbra */
 }
 
 /*

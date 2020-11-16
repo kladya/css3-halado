@@ -15,7 +15,7 @@
 .container-clearfix {
     background-color: aqua;
     display: inline-block;  /*  a div alapértelmezetten block elem, azaz teljes szélességű */
-}                           /*  display: inline --> eltűnik a container  *
+}                           /*  display: inline --> eltűnik a container  */
                             /*  inline-block --> kisebb lesz az elem  --> elfér még mellette tartalom  */
 
 .clearfix::after {   /*  sortörés az elem után  */
